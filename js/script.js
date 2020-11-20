@@ -31,7 +31,7 @@ var arrayUser = [];
 function numberUser(volta) {
 
   for (var i = 0; i < 1; i++) {
-    var numberUser = parseInt(prompt("Inserisci un numero tra 1 e 100 (" + volta+1 + ")"));
+    var numberUser = parseInt(prompt("Inserisci un numero tra 1 e 100 (" + volta++ + ")"));
     var notPush = false;
 
     if(!(isNaN(numberUser)) && numberUser > 0 && numberUser < 85) {
@@ -69,14 +69,14 @@ function checkNumber() {
 
     for (var z = 0; z < arrayPc.length; z++) {
       if (numeroUtente == arrayPc[z]) {
-        console.log("Punteggio: " + i+1);
+        console.log("Punteggio: " + i);
         alert("hai perso, il numero inserito non è valido!");
         return "perso";
       }
     }
 
     if(i == 84) {
-      console.log("Punteggio: " + i+1);
+      console.log("Punteggio: " + i);
       alert("hai vinto");
       return "vinto";
     }

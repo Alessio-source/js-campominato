@@ -63,21 +63,26 @@ function numberUser(volta) {
 // raggiunge il numero massimo possibile di numeri consentiti.
 function checkNumber() {
   console.log(numberPc());
+  var score = document.getElementById("punteggio");
+  var winAndLoseElement = document.getElementById("winAndLoseElement");
 
   for (var i = 0; i < 84; i++) {
+    var punteggio = "Punteggio: " + i;
     var numeroUtente = numberUser(i);
 
     for (var z = 0; z < arrayPc.length; z++) {
       if (numeroUtente == arrayPc[z]) {
-        console.log("Punteggio: " + i);
-        alert("hai perso, il numero inserito non è valido!");
+        score.innerHTML = punteggio;
+        winAndLoseElement.innerHTML = "hai perso, il numero inserito non è valido!";
+        winAndLoseElement.className = "red";
         return "perso";
       }
     }
 
     if(i == 84) {
-      console.log("Punteggio: " + i);
-      alert("hai vinto");
+      score.innerHTML = punteggio;
+      winAndLoseElement.innerHTML = "complimenti, hai vinto!";
+      winAndLoseElement.className = "green";
       return "vinto";
     }
   }

@@ -34,7 +34,7 @@ function numberUser(volta) {
     var numberUser = parseInt(prompt("Inserisci un numero tra 1 e 100 (" + volta++ + ")"));
     var notPush = false;
 
-    if(!(isNaN(numberUser)) && numberUser > 0 && numberUser < 85) {
+    if(!(isNaN(numberUser)) && numberUser > 0 && numberUser < 100) {
       for (var z = 0; z < arrayUser.length; z++) {
 
         if (numberUser == arrayUser[z]) {
